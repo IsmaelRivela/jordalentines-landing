@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="scss/index.css">
+    <script defer src="js/index.js"></script>
+    <script>
+        // Función para redirigir según el tamaño de la pantalla
+        let redirigirSegunPantalla = ()=>{
+            // Obtener el ancho de la ventana
+            const anchoVentana = window.innerWidth
+
+            // Establecer un umbral para la redirección (por ejemplo, 600px)
+            const umbralRedireccion = 1000
+
+            // Decidir si redirigir a la versión para dispositivos más pequeños o más grandes
+            if (anchoVentana < umbralRedireccion) {
+                window.location.href = 'mobile.html'
+            }
+        }
+
+        // Llamar a la función cuando se carga la página
+        window.onload = redirigirSegunPantalla
+        window.addEventListener('resize', redirigirSegunPantalla)
+    </script>
+</head>
+
+
+
+<body>
+
+
+    <header class="Header">
+
+        <h1 class="Header-h1"> Logo Nike </h1>
+
+        <nav class="Header-nav">
+
+            <ul class="Header-ul">
+
+                <li class="Header-li"> item </li>
+                <li class="Header-li"> item </li>
+                <li class="Header-li"> item </li>
+                <li class="Header-li"> item </li>
+            
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main class="Main">
+        <div class="Main-wrapper">
+            <div class="Main-background">
+                <video src="assets/cielogif_compressed.mp4" class="Main-background-video" autoplay loop muted ></video>
+            </div>
+    
+            <div class="Main-container">
+
+                <div class="Main-angels">
+                    <img src="assets/angel der.webp" alt="angel" class="Main-angels-img Main-angels-img--der">
+                    <img src="assets/angel izq.webp" alt="angel" class="Main-angels-img Main-angels-img--izq">
+                </div>
+
+                <div class="Main-scrolls">
+                    <img src="assets/scrolls.webp" alt="scrolls" class="Main-scrolls-img">
+                </div>
+    
+                <div class="Main-tv">
+                    <img src="assets/tv.webp" alt=" tv " class="Main-tv-img">
+                    <a href="#" class="Main-tv-link"> Click </a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+
+         
+
+    </main>
+
+
+</body>
+</html>

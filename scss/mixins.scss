@@ -1,0 +1,17 @@
+@mixin displayFlex($display , $flow , $justify , $align) {
+    display: $display ; 
+    flex-flow: $flow ;
+    justify-content: $justify ;
+    align-items: $align ;
+}
+
+@mixin basicValues($minHeight , $width , $backgroundColor) {
+    min-height: $minHeight;
+    width: $width;
+    background-color: $backgroundColor;
+}
+
+@mixin imageFit{
+    width: 100%;
+    object-fit: cover;
+}

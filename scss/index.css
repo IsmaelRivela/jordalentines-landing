@@ -1,0 +1,291 @@
+@charset "UTF-8";
+:root {
+  /* Colores */
+  --negro: #393939;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/* (Opcional) Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
+}
+/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+/* (Opcional) Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+*::before, *::after {
+  display: block;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* (Opcional) */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* (Opcional) */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* (Opcional) Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* (Opcional) Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* (Opcional) */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--negro);
+  /* (Opcional) */
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  /* (Opcional) */
+  font-smooth: always;
+  /* (Opcional) */
+  -webkit-font-smoothing: antialiased;
+  /* (Opcional) */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 300vh;
+}
+
+.Header {
+  min-height: 10vh;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: fixed;
+  z-index: 2;
+}
+.Header-h1 {
+  background-color: white;
+}
+.Header-ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+.Header-li {
+  background-color: blue;
+}
+
+.Main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: yellow;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+.Main-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  background-color: green;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.Main-background {
+  width: 100%;
+  position: fixed;
+}
+.Main-background-video {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Main-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+}
+.Main-scrolls {
+  min-height: 50vh;
+  width: 80%;
+  background-color: transparent;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  top: 15vh;
+  left: 10%;
+  transform: scale(100%);
+}
+.Main-scrolls-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 40rem;
+}
+.Main-angels {
+  min-height: 40vh;
+  width: 100%;
+  background-color: transparent;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+}
+.Main-angels-img {
+  min-height: 30vh;
+  width: 33.3333333333%;
+  background-color: yellow;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 40rem;
+  position: absolute;
+  top: calc(50vh - 20rem);
+}
+.Main-angels-img--der {
+  background-color: transparent;
+  right: 0;
+}
+.Main-angels-img--izq {
+  background-color: transparent;
+  left: 0;
+}
+@media (max-width: 1500px) {
+  .Main-angels-img {
+    max-width: 20rem;
+    top: calc(50vh - 10rem);
+  }
+}
+.Main-tv {
+  min-height: 30vh;
+  width: 50%;
+  background-color: transparent;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  top: 35vh;
+  left: 25%;
+}
+.Main-tv-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 20rem;
+}
+.Main-tv-link {
+  background-color: red;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  top: calc(15vh - 15px);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.isActive {
+  opacity: 1;
+}/*# sourceMappingURL=index.css.map */

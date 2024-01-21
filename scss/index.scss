@@ -1,0 +1,137 @@
+@import 'reset';
+@import 'mixins';
+
+body{
+    min-height: 300vh;
+}
+
+.Header{
+
+    @include basicValues( 10vh , 100% , transparent );
+    @include displayFlex( flex , row nowrap , space-between , center);
+
+    padding: 1rem 2rem;
+
+    position: fixed;
+    z-index: 2;
+
+    &-h1{
+        background-color: white;
+    }
+    &-nav{
+        
+    }
+    &-ul{
+        @include displayFlex(flex , column nowrap , space-between , center );
+
+        gap: 5px ;
+    }
+    &-li{
+        background-color: blue;
+    }
+    
+}
+
+
+.Main{
+
+    @include basicValues( 100vh , 100% , yellow );
+    @include displayFlex( flex , column nowrap , center , center);
+
+    position: fixed ;
+
+    &-wrapper{
+        @include basicValues( 100vh , 100% , green );
+        @include displayFlex( flex , column nowrap , center , center);
+
+        position: relative;
+    }
+    &-background{
+        width: 100%;
+        position: fixed ;
+        &-video{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &-container{
+        @include basicValues(100vh , 100% , transparent );
+        
+        position: absolute;
+    }
+    &-scrolls{
+        @include basicValues(50vh , 80% , transparent );
+        @include displayFlex(flex , row nowrap , center , center);
+        
+        position: absolute;
+        z-index: 3;
+        top: calc(50vh - 35vh);
+        left: calc(50% - 40%);
+        transform: scale(100%);
+
+        &-img{
+            @include imageFit;
+            max-width: 40rem;
+        }
+    }
+    &-angels{
+        @include basicValues( 40vh , 100% , transparent );
+        
+        position: absolute;
+        z-index: 4;
+        top: 0;
+        // left: calc(50% - 40%);
+        
+        &-img{
+
+            @include basicValues(30vh , calc(100%/3) , yellow );
+            @include imageFit;
+            max-width: 40rem;
+            position: absolute;
+            
+            top: calc(50vh - 20rem);
+
+            &--der{
+                background-color: transparent;
+                right: 0;
+            }
+            &--izq{
+                background-color: transparent;
+                left: 0;    
+            }
+            @media (max-width: 1500px) {
+                max-width: 20rem;
+                top: calc(50vh - 10rem);
+              }
+        }
+    }
+    &-tv{
+        @include basicValues(30vh , 50% , transparent);
+        @include displayFlex(flex , column nowrap , flex-start , center);
+        
+        position: absolute;
+        z-index: 2;
+        top: calc(50vh - 15vh);
+        left: calc(50% - 25%);
+        
+        &-img{
+            @include imageFit;
+            max-width: 20rem;
+        }
+        &-link{
+            background-color: red;
+            padding: 0.5rem 1rem;
+
+            position: absolute;
+            top: calc(15vh - 15px);
+
+            opacity: 0;
+            transition: opacity 0.5s ease ;
+
+        }
+    }
+}
+
+.isActive{
+    opacity: 1;
+}

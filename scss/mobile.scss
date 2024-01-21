@@ -1,0 +1,101 @@
+@use 'reset.scss';
+
+@mixin displayFlex {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin basicValues($minHeight , $width , $backgroundColor) {
+    min-height: $minHeight;
+    width: $width;
+    background-color: $backgroundColor;
+}
+
+body{
+    min-height: 300vh;
+}
+
+.Header {
+    @include basicValues(10vh , 100% , transparent);
+
+    position: fixed;
+    z-index: 2;
+
+    &-wrapper {
+        @include displayFlex;
+
+        justify-content: space-between;
+        padding: 2rem ;
+    }
+
+    &-h1 {
+        background-color: red;
+
+    }
+
+    &-nav {
+        // Agrega estilos según sea necesario
+    }
+
+    &-ul {
+        // Agrega estilos según sea necesario
+    }
+
+    &-li {
+        background-color: red;
+    }
+}
+
+.Main {
+    @include basicValues(100vh , 100% , yellow);
+    @include displayFlex;
+
+    align-items: center;
+    position: fixed;
+
+
+    #Main-canvas {
+    
+        @include basicValues(100vh , 100%, transparent);
+
+        position: fixed ;
+        object-fit: cover ;
+
+        &.isScrolled{
+            width: 100%;
+        };
+    
+    }
+
+    &-bg {
+
+        @include basicValues(100vh, 100% , transparent);
+
+        background-image: url(../assets/bg-mobile.jpeg);
+        background-repeat: no-repeat ;
+        background-position: center;
+        background-size: cover ;
+
+    }
+
+    &-link{
+
+        font-size: 2rem;
+        position: absolute;
+        z-index: 3;
+        background-color: yellow;
+        padding: 1rem 2rem;
+        
+        opacity: 0;
+        transition: opacity 0.5s ease;
+
+        
+    
+    }
+}
+
+.isActive{
+            opacity: 1;
+        }
