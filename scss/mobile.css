@@ -154,16 +154,50 @@ body {
 .Header-wrapper {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   justify-content: space-between;
   padding: 2rem;
 }
 .Header-h1 {
-  background-color: red;
+  max-width: 10rem;
+}
+@media (max-width: 480px) {
+  .Header-h1 {
+    max-width: 5rem;
+  }
+}
+.Header-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .Header-li {
-  background-color: red;
+  font-family: "elmhurst", serif;
+  font-weight: 800;
+  font-style: normal;
+  background-color: white;
+  color: #EF4677;
+  margin: 0.5rem;
+  padding: 0 0.5rem;
+  mix-blend-mode: difference;
+  pointer-events: all;
+}
+.Header-li:hover {
+  background-color: #EF4677;
+  color: white;
+  text-decoration: underline;
+}
+@media (max-width: 480px) {
+  .Header-li {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+  }
+}
+@media (min-width: 700px) {
+  .Header-li {
+    font-size: 1rem;
+  }
 }
 
 .Main {

@@ -144,7 +144,7 @@ let cargarImagen = (numeroImagen) => {
   }
 }
 
-function animar() {
+let animar = () => {
   let scrollY = window.scrollY
   let proporcion = totalFrames / scrollPixeles
   let framesAvanzados = Math.floor(scrollY * proporcion)

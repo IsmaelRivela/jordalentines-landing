@@ -1,18 +1,6 @@
-@use 'reset.scss';
-@use 'mixins.scss';
+@import 'reset.scss';
+@import 'mixins.scss';
 
-@mixin displayFlex {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin basicValues($minHeight , $width , $backgroundColor) {
-    min-height: $minHeight;
-    width: $width;
-    background-color: $backgroundColor;
-}
 
 body{
     min-height: 300vh;
@@ -25,15 +13,23 @@ body{
     z-index: 2;
 
     &-wrapper {
-        @include displayFlex;
+        @include displayFlex(flex , row nowrap , space-between , center);
 
         justify-content: space-between;
         padding: 2rem ;
     }
 
-    &-h1 {
-        background-color: red;
+    &-h1{
 
+        max-width: 10rem;
+
+        @media(max-width: 480px ){
+            max-width: 5rem ;
+        }
+    }
+
+    &-img{
+        @include imageFit;
     }
 
     &-nav {
@@ -44,14 +40,44 @@ body{
         // Agrega estilos según sea necesario
     }
 
-    &-li {
-        background-color: red;
+    &-li{
+        
+        @include ElmhurstBoldFont;
+
+        background-color: white ;
+        color: #EF4677;
+        // border: 2px solid #EF4677;
+        // border-radius: 5px;
+        margin: 0.5rem ;
+
+        padding: 0 0.5rem;
+
+        mix-blend-mode: difference ;
+
+        pointer-events: all ;
+
+        &:hover{
+            background-color: #EF4677  ;
+            color: white ;
+            text-decoration: underline;
+        }
+
+        @media(max-width: 480px){
+            font-size: 0.8rem ;
+            padding: 0.2rem ;
+
+        }
+
+        @media(min-width: 700px){
+            font-size: 1rem ;
+        }
+
     }
 }
 
 .Main {
     @include basicValues(100svh , 100% , yellow);
-    @include displayFlex;
+    @include displayFlex(flex , row nowrap , center , center );
 
     align-items: center;
     position: fixed;
