@@ -39,6 +39,7 @@ body{
     @include displayFlex( flex , column nowrap , center , center);
 
     position: fixed ;
+    pointer-events: none ;
 
     &-wrapper{
         @include basicValues( 100vh , 100% , green );
@@ -80,6 +81,8 @@ body{
         position: absolute;
         z-index: 4;
         top: 0;
+
+        pointer-events: none;
         // left: calc(50% - 40%);
         
         &-img{
@@ -113,6 +116,8 @@ body{
         z-index: 2;
         top: calc(50vh - 15vh);
         left: calc(50% - 25%);
+
+        pointer-events: none;
         
         &-img{
             @include imageFit;
@@ -127,7 +132,8 @@ body{
 
             opacity: 0;
             transition: opacity 0.5s ease ;
-
+            
+            pointer-events: all ;
         }
     }
 }

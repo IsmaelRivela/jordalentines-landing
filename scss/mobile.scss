@@ -1,4 +1,5 @@
 @use 'reset.scss';
+@use 'mixins.scss';
 
 @mixin displayFlex {
     display: flex;
@@ -49,7 +50,7 @@ body{
 }
 
 .Main {
-    @include basicValues(100vh , 100% , yellow);
+    @include basicValues(100svh , 100% , yellow);
     @include displayFlex;
 
     align-items: center;

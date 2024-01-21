@@ -167,7 +167,7 @@ body {
 }
 
 .Main {
-  min-height: 100vh;
+  min-height: 100svh;
   width: 100%;
   background-color: yellow;
   display: flex;
