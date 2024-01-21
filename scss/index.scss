@@ -27,10 +27,6 @@ body{
     &-img{
         @include imageFit;
     }
-
-    &-nav{
-        
-    }
     &-ul{
         @include displayFlex(flex , column nowrap , space-between , center );
 
@@ -42,8 +38,7 @@ body{
 
         background-color: white ;
         color: #EF4677;
-        // border: 2px solid #EF4677;
-        // border-radius: 5px;
+
         margin: 0.5rem ;
 
         padding: 0 0.5rem;
@@ -120,10 +115,7 @@ body{
         
         position: relative;
         z-index: 3;
-        // top: calc(50vh - 30vh);
-        // left: calc(50% - 40%);
-        transform: scale(100%);
-
+       
         @media(min-width: 1600px){
         }
 

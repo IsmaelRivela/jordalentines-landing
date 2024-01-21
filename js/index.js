@@ -1,5 +1,7 @@
 `use strict`
 
+// Listener de scroll
+
 const mainScrolls = document.querySelector(`.Main-scrolls`)
 const mainAngelRight = document.querySelector(`.Main-angels-img--der`)
 const mainAngelLeft = document.querySelector(`.Main-angels-img--izq`)

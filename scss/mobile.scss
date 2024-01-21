@@ -32,22 +32,13 @@ body{
         @include imageFit;
     }
 
-    &-nav {
-        // Agrega estilos según sea necesario
-    }
-
-    &-ul {
-        // Agrega estilos según sea necesario
-    }
-
     &-li{
         
         @include ElmhurstBoldFont;
 
         background-color: white ;
         color: #EF4677;
-        // border: 2px solid #EF4677;
-        // border-radius: 5px;
+      
         margin: 0.5rem ;
 
         padding: 0 0.5rem;

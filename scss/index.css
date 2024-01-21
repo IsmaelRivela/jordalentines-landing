@@ -265,7 +265,6 @@ body {
   align-items: center;
   position: relative;
   z-index: 3;
-  transform: scale(100%);
 }
 .Main-scrolls-img {
   width: 100%;
