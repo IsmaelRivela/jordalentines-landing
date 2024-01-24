@@ -61,7 +61,7 @@ const scrollPixels = document.documentElement.scrollHeight - window.innerHeight;
 
 const totalFrames = 99;
 const imagesPerPage = 10;
-const cache = new Map();
+const cache = new Map()
 
 let currentPage = 1;
 
@@ -72,12 +72,12 @@ let cargarImagen = (numeroImagen) => {
   }
 
   return new Promise((resolve, reject) => {
-    const Imagen = new Image();
-    Imagen.src = `assets/canvas/(${numeroImagen}).png`;
+    const Imagen = new Image()
+    Imagen.src = `assets/canvas/(${numeroImagen}).png`
 
     Imagen.onload = () => {
       cache.set(numeroImagen, Imagen);
-      resolve(Imagen);
+      resolve(Imagen)
     };
 
     Imagen.onerror = (error) => {
@@ -87,28 +87,28 @@ let cargarImagen = (numeroImagen) => {
 };
 
 let animar = () => {
-  let scrollY = window.scrollY;
-  let proporcion = totalFrames / scrollPixels;
-  let framesAvanzados = Math.floor(scrollY * proporcion);
+  let scrollY = window.scrollY
+  let proporcion = totalFrames / scrollPixels
+  let framesAvanzados = Math.floor(scrollY * proporcion)
 
   if (framesAvanzados > totalFrames) {
-    framesAvanzados = totalFrames;
+    framesAvanzados = totalFrames
   } else if (framesAvanzados < 1) {
-    framesAvanzados = 1;
+    framesAvanzados = 1
   }
 
   if (framesAvanzados >= 80) {
-    buttonLink.classList.add("isActive");
+    buttonLink.classList.add("isActive")
   } else {
-    buttonLink.classList.remove("isActive");
+    buttonLink.classList.remove("isActive")
   }
 
   cargarImagen(framesAvanzados).then((imagen) => {
     canvas.width = imagen.width;
-    canvas.height = imagen.height;
+    canvas.height = imagen.height
 
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(imagen, 0, 50, canvas.width, canvas.height);
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    ctx.drawImage(imagen, 0, 50, canvas.width, canvas.height)
   });
 
   requestAnimationFrame(animar);
@@ -116,28 +116,28 @@ let animar = () => {
 
 const loadNextPage = () => {
   for (let i = 0; i < imagesPerPage; i++) {
-    cargarImagen(currentPage * imagesPerPage + i);
+    cargarImagen(currentPage * imagesPerPage + i)
   }
   currentPage++;
-};
+}
 
 // Inicializar con la primera página
-loadNextPage();
+loadNextPage()
 
 // Escuchar el evento de scroll
 window.addEventListener("scroll", () => {
   // Detectar cuando el usuario llega al final de la página
   if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
     // Cargar la siguiente página
-    loadNextPage();
+    loadNextPage()
   }
 
   // Animar según el scroll
-  requestAnimationFrame(animar);
+  requestAnimationFrame(animar)
 });
 
 // Evento onload para cargar la primera imagen al cargar la página
 window.onload = () => {
-  cargarImagen(1);
+  cargarImagen(1)
 };
 
