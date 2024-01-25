@@ -186,15 +186,15 @@ body{
             justify-content: center;
             align-items: center;
         }
-        &-gif{
-            @include imageFit;
+        // &-gif{
+        //     @include imageFit;
             
-            max-width: 12rem;
+        //     max-width: 12rem;
 
-            @media(min-width: 1600px){
-                max-width: 20rem ;
-            }
-        }
+        //     @media(min-width: 1600px){
+        //         max-width: 20rem ;
+        //     }
+        // }
         &-img{
             position: absolute;
             @include imageFit;
