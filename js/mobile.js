@@ -197,7 +197,7 @@ let animar = () => {
     canvas.height = imagen.height;
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(imagen, 0, 50, canvas.width, canvas.height);
+    ctx.drawImage(imagen, 0, 0, canvas.width, canvas.height);
   });
 };
 
