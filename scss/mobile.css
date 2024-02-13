@@ -180,6 +180,7 @@ body {
   color: #EF4677;
   margin: 0.5rem;
   padding: 0 0.5rem;
+  border-radius: 10px;
   mix-blend-mode: difference;
   pointer-events: all;
 }
@@ -203,7 +204,7 @@ body {
 .Main {
   min-height: 100svh;
   width: 100%;
-  background-color: yellow;
+  background-color: black;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -232,11 +233,15 @@ body {
   background-size: cover;
 }
 .Main-link {
+  font-family: "elmhurst", serif;
+  font-weight: 800;
+  font-style: normal;
   font-size: 2rem;
   position: absolute;
   z-index: 3;
-  background-color: yellow;
+  background-color: white;
   padding: 1rem 2rem;
+  border-radius: 10px;
   opacity: 0;
   transition: opacity 0.5s ease;
 }

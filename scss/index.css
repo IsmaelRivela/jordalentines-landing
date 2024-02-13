@@ -213,7 +213,7 @@ body {
 .Main {
   min-height: 100vh;
   width: 100%;
-  background-color: yellow;
+  background-color: black;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -335,17 +335,6 @@ body {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-}
-.Main-tv-gif {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  max-width: 12rem;
-}
-@media (min-width: 1600px) {
-  .Main-tv-gif {
-    max-width: 20rem;
-  }
 }
 .Main-tv-img {
   position: absolute;
