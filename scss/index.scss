@@ -76,7 +76,7 @@ body{
 
 .Main{
 
-    @include basicValues( 100vh , 100% , yellow );
+    @include basicValues( 100vh , 100% , black );
     @include displayFlex( flex , column nowrap , center , center);
 
     position: fixed ;

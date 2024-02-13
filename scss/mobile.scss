@@ -43,6 +43,8 @@ body{
 
         padding: 0 0.5rem;
 
+        border-radius: 10px;
+
         mix-blend-mode: difference ;
 
         pointer-events: all ;
@@ -67,7 +69,7 @@ body{
 }
 
 .Main {
-    @include basicValues(100svh , 100% , yellow);
+    @include basicValues(100svh , 100% , black);
     @include displayFlex(flex , row nowrap , center , center );
 
     align-items: center;
@@ -100,11 +102,15 @@ body{
 
     &-link{
 
+        @include ElmhurstBoldFont;
+
         font-size: 2rem;
         position: absolute;
         z-index: 3;
-        background-color: yellow;
+        background-color: white;
         padding: 1rem 2rem;
+
+        border-radius: 10px;
         
         opacity: 0;
         transition: opacity 0.5s ease;
