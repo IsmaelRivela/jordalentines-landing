@@ -6,6 +6,31 @@ body{
     min-height: 300vh;
 }
 
+.Scroll-wrapper{
+    @include basicValues( 100vh , 100% , transparent );
+    @include displayFlex( flex , row nowrap , center , center );
+    @include ElmhurstBoldFont;
+
+    
+    position: absolute ;
+    z-index: 5 ;
+
+    color: white ;
+    font-size: 4rem ;
+
+    animation: scrollAnimation 3s ease infinite ;
+    
+    @media(max-width: 550px ){
+        font-size: 2rem ;
+    }
+
+    @keyframes scrollAnimation {
+        0% { opacity: 1};
+        50% { opacity: 0};
+        100% { opacity: 1};
+    }
+}
+
 .Header {
     @include basicValues(10vh , 100% , transparent);
 

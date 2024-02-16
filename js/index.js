@@ -27,7 +27,7 @@ window.addEventListener(`scroll` , ()=>{
 
         mainScrolls.style.transform = `scale(calc(${proporcion}% * 3)`
         
-        mainTv.style.transform = `scale(calc(${proporcion}% * 1.5 )`
+        mainTv.style.transform = `scale(calc(${proporcion}% * 2.5 )`
 
         mainAngels.style.transform = `scale(calc(${proporcion}% * 3.5)`
 

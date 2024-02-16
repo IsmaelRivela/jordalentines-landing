@@ -5,6 +5,7 @@ const canvas = document.getElementById("Main-canvas")
 const ctx = canvas.getContext("2d")
 const buttonLink = document.querySelector(".Main-link")
 
+
 const totalFrames = 99
 const cache = new Map()
 
