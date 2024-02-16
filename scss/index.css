@@ -330,6 +330,7 @@ body {
 .Main-angels-img--der {
   background-color: transparent;
   right: 5rem;
+  transform: scaleX(-1);
 }
 .Main-angels-img--izq {
   background-color: transparent;
