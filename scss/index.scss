@@ -93,6 +93,8 @@ body{
     &-ul{
         @include displayFlex(flex , column nowrap , space-between , center );
 
+        background-color: white;
+
         gap: 5px ;
     }
     &-li{
@@ -104,10 +106,9 @@ body{
         border-radius: 10px;
 
         margin: 0.5rem ;
-
         padding: 0 0.5rem;
 
-        mix-blend-mode: difference ;
+        transition: background-color 0.5s ease;
 
         pointer-events: all ;
         cursor: pointer;
