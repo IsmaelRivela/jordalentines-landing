@@ -154,6 +154,7 @@ body {
   z-index: 5;
   color: white;
   font-size: 4rem;
+  pointer-events: none;
   animation: scrollAnimation 3s ease infinite;
 }
 @media (max-width: 550px) {
