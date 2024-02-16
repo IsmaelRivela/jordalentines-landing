@@ -212,6 +212,7 @@ body {
   font-style: normal;
   background-color: white;
   color: #EF4677;
+  border-radius: 10px;
   margin: 0.5rem;
   padding: 0 0.5rem;
   mix-blend-mode: difference;
@@ -380,11 +381,16 @@ body {
   }
 }
 .Main-tv-link {
-  background-color: red;
+  font-family: "elmhurst", serif;
+  font-weight: 800;
+  font-style: normal;
+  background-color: #EF4677;
+  color: white;
   padding: 0.5rem 1rem;
   position: absolute;
   top: 15vh;
   left: calc(50% - 60px);
+  border-radius: 10px;
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: all;
@@ -392,7 +398,7 @@ body {
 }
 .Main-tv-link:hover {
   background-color: white;
-  color: red;
+  color: #EF4677;
 }
 
 .isActive {

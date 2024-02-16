@@ -64,6 +64,7 @@ body{
 
         background-color: white ;
         color: #EF4677;
+        border-radius: 10px;
 
         margin: 0.5rem ;
 
@@ -233,12 +234,16 @@ body{
             }
         }
         &-link{
-            background-color: red;
+            @include ElmhurstBoldFont;
+
+            background-color: #EF4677;
+            color: white;
             padding: 0.5rem 1rem;
 
             position: absolute;
             top: 15vh ;
             left: calc(50% - 60px);
+            border-radius: 10px;
 
             opacity: 0;
             transition: opacity 0.5s ease ;
@@ -248,7 +253,7 @@ body{
 
             &:hover{
                 background-color: white;
-                color: red;
+                color: #EF4677;
             }
         }
     }
