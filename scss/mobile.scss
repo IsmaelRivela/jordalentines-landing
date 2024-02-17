@@ -74,6 +74,7 @@ body{
 
     position: fixed;
     z-index: 2;
+    mix-blend-mode: multiply;
 
     &-wrapper {
         @include displayFlex(flex , row nowrap , space-between , center);
@@ -178,9 +179,13 @@ body{
         border-radius: 10px;
         
         opacity: 0;
-        transition: opacity 0.5s ease;
+        transition: opacity 0.5s ease , 
+                    background-color 0.5s ease;
 
-        
+        &:hover{
+            background-color: #EF4677;
+            color: white;
+        }
     
     }
 }

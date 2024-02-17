@@ -236,6 +236,7 @@ body {
   background-color: transparent;
   position: fixed;
   z-index: 2;
+  mix-blend-mode: multiply;
 }
 .Header-wrapper {
   display: flex;
@@ -331,7 +332,11 @@ body {
   padding: 1rem 2rem;
   border-radius: 10px;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease, background-color 0.5s ease;
+}
+.Main-link:hover {
+  background-color: #EF4677;
+  color: white;
 }
 
 .isActive {
